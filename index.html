@@ -39,21 +39,18 @@
       display: flex;
       align-items: flex-start; /* ensure top alignment */
     }
-    
-    /* Make sidebar fixed */
+
+    /* Sidebar fixed */
     .sidebar {
       position: fixed;
       top: 100px;
-      left: max(40px, calc((100vw - 1200px)/2 + 40px)); /* stay visible on smaller widths */
+      left: max(40px, calc((100vw - 1200px)/2 + 40px));
       width: 230px;
       padding-right: 40px;
       border-right: 1px solid #eeeeee;
       height: calc(100vh - 200px);
       overflow: hidden;
     }
-
-
-
 
     .name-block {
       margin-bottom: 24px;
@@ -99,10 +96,9 @@
     }
 
     /* Right main content */
-    /* Push content to the right of fixed sidebar */
     .content {
       flex: 1;
-      padding-left: 300px; /* enough to clear the fixed sidebar width + spacing */
+      padding-left: 300px; /* clear sidebar */
       font-size: 15px;
     }
 
@@ -153,9 +149,9 @@
         padding: 0 20px;
         margin: 40px auto 40px;
       }
-    
+
       .sidebar {
-        position: static;      /* reset from fixed */
+        position: static;
         top: auto;
         left: auto;
         width: 100%;
@@ -165,16 +161,14 @@
         height: auto;
         overflow: visible;
       }
-    
+
       .content {
-        padding-left: 0;       /* no sidebar to clear now */
+        padding-left: 0;
       }
-    
+
       .profile-photo {
         width: 160px;
-  }
-}
-  }
+      }
     }
   </style>
 </head>
@@ -189,7 +183,6 @@
       <span class="last">Pawar</span>
     </div>
 
-    <!-- put your own image as me.jpg in the repo, or change src -->
     <img src="Picture.jpg" alt="Aditya Pawar" class="profile-photo">
 
     <ul class="sidebar-links">
@@ -203,14 +196,43 @@
   <!-- ====== RIGHT: MAIN CONTENT ====== -->
   <main class="content">
     <!-- Intro -->
-    <p> I am an undergraduate student at <a href="https://www.coeptech.ac.in/" target="_blank" style="color:red; text-decoration:none;">COEP Technological University</a>, India, pursuing a B.Tech (Honors) in Electronics and Telecommunication Engineering. My research interests lie at the intersection of machine learning, signal processing, and communication systems, with applications in both wireless networks and imaging. </p> <p> Previously, I have worked as a <span style="color:red;">Research Intern</span> at <a href="https://aerolifi.com/" target="_blank" style="color:red; text-decoration:none;">aeroLiFi GmbH (Germany)</a>, focusing on optical wireless and LiFi-based communication systems. My work involved experimental design and analysis for high-speed LiFi links, integrating them with conventional RF systems. I also served as a Volunteer Research Assistant at <span style="color:red;">Stanford University</span> with <span style="color:red;">Dr. Michael Ghijsen</span>, where I applied deep learning to medical image segmentation and tissue quantification using CT imaging. </p> <p> As an undergraduate at <a href="https://www.coeptech.ac.in/" target="_blank" style="color:red; text-decoration:none;">COEP Technological University</a>, I have worked with <span style="color:red;">Dr. Shilpa Metkar</span> on digital forensics and steganalysis, developing CNN-based models for detecting hidden information in images. In parallel, I collaborated with <span style="color:red;">Dr. Shubhangi Deshmukh</span> on machine learning–based 5G signal anomaly detection and jamming localization, contributing to robust and self-healing network mechanisms. </p>
+    <p>
+      I am an undergraduate student at
+      <a href="https://www.coeptech.ac.in/" target="_blank">COEP Technological University</a>, India,
+      pursuing a B.Tech (Honors) in Electronics and Telecommunication Engineering.
+      My research interests lie at the intersection of
+      <span style="color:#c0392b;">machine learning, signal processing, and communication systems</span>,
+      with applications in both wireless networks and imaging.
+    </p>
+
+    <p>
+      Previously, I have worked as a
+      <span style="color:#c0392b;">Research Intern</span> at
+      <a href="https://aerolifi.com/" target="_blank">aeroLiFi GmbH (Germany)</a>,
+      focusing on optical wireless and LiFi-based communication systems.
+      My work involved experimental design and analysis for high-speed LiFi links, integrating them with conventional RF systems.
+      I also served as a Volunteer Research Assistant at
+      <span style="color:#c0392b;">Stanford University</span> with
+      <span style="color:#c0392b;">Dr. Michael Ghijsen</span>, where I applied deep learning to medical image segmentation
+      and tissue quantification using CT imaging.
+    </p>
+
+    <p>
+      As an undergraduate at
+      <a href="https://www.coeptech.ac.in/" target="_blank">COEP Technological University</a>, I have worked with
+      <span style="color:#c0392b;">Dr. Shilpa Metkar</span> on digital forensics and steganalysis, developing CNN-based models for detecting hidden information in images.
+      In parallel, I collaborated with
+      <span style="color:#c0392b;">Dr. Shubhangi Deshmukh</span> on machine learning–based 5G signal anomaly detection and jamming localization,
+      contributing to robust and self-healing network mechanisms.
+    </p>
+
     <!-- News -->
     <h2>News</h2>
     <ul class="news-list">
-        <li><strong>Nov 2025</strong> | Presented my paper at <b>IEEE MECOM</b>.</li>
-        <li><strong>Nov 2025</strong> | Pitched my research proposal on <b>6G signal jamming and localization</b> to industry innovation scouts at the first-ever <b>Research Collaboration Pitch Session</b> organized by <b>IEEE ComSoc</b>.</li>
-        <li><strong>May 2025</strong> | Presented my first paper at <b>IEEE INCET</b>.</li>
-        <li><strong>May–Aug 2025</strong> | Interned at <b>aeroLiFi GmbH</b>, gaining hands-on experience with <b>cutting-edge optical wireless communication technologies</b>.</li>
+      <li><strong>Nov 2025</strong> | Presented my paper at <b>IEEE MECOM</b>.</li>
+      <li><strong>Nov 2025</strong> | Pitched my research proposal on <b>6G signal jamming and localization</b> to industry innovation scouts at the first-ever <b>Research Collaboration Pitch Session</b> organized by <b>IEEE ComSoc</b>.</li>
+      <li><strong>May 2025</strong> | Presented my first paper at <b>IEEE INCET</b>.</li>
+      <li><strong>May–Aug 2025</strong> | Interned at <b>aeroLiFi GmbH</b>, gaining hands-on experience with <b>cutting-edge optical wireless communication technologies</b>.</li>
     </ul>
 
     <!-- Publications -->
@@ -240,8 +262,6 @@
           IEEE MECOM 2025 · <a href="#">To appear in IEEE Xplore</a>
         </span>
       </div>
-
-      <!-- add more pub-item blocks as needed -->
     </div>
 
   </main>
