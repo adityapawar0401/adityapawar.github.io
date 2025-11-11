@@ -43,14 +43,16 @@
     /* Make sidebar fixed */
     .sidebar {
       position: fixed;
-      top: 100px; /* same as page’s top margin */
-      left: calc((100vw - 1200px)/2 + 40px); /* centers it relative to the main layout */
+      top: 100px;
+      left: max(40px, calc((100vw - 1200px)/2 + 40px)); /* stay visible on smaller widths */
       width: 230px;
       padding-right: 40px;
       border-right: 1px solid #eeeeee;
-      height: calc(100vh - 200px); /* fill available height */
-      overflow: hidden; /* hide scrollbars for sidebar */
+      height: calc(100vh - 200px);
+      overflow: hidden;
     }
+
+
 
 
     .name-block {
@@ -149,22 +151,30 @@
       .page {
         flex-direction: column;
         padding: 0 20px;
+        margin: 40px auto 40px;
       }
-
+    
       .sidebar {
+        position: static;      /* reset from fixed */
+        top: auto;
+        left: auto;
         width: 100%;
         border-right: none;
         padding-right: 0;
         margin-bottom: 24px;
+        height: auto;
+        overflow: visible;
       }
-
+    
       .content {
-        padding-left: 0;
+        padding-left: 0;       /* no sidebar to clear now */
       }
-
+    
       .profile-photo {
         width: 160px;
-      }
+  }
+}
+  }
     }
   </style>
 </head>
@@ -205,10 +215,10 @@
     <!-- News -->
     <h2>News</h2>
     <ul class="news-list">
-      <li><strong>Aug 2024</strong> | [Your recent news / achievement]</li>
-      <li><strong>Jun 2024</strong> | [Another update]</li>
-      <li><strong>Jan 2024</strong> | [Paper / talk / award]</li>
-      <li><strong>Dec 2023</strong> | [Anything relevant]</li>
+      <li><strong>Nov 2025</strong> | IEEE MECOM Paper Presentation</li>
+      <li><strong>Nov 2025</strong> | IEEE MECOM Research Collaboration Pitch Session organized by Comsoc</li>
+      <li><strong>May 2025</strong> | IEEE INCET Online Paper presentation</li>
+      <li><strong>May - August 2025</strong> | Research Internship at aeroLiFi GmbH </li>
     </ul>
 
     <!-- Publications -->
@@ -217,25 +227,25 @@
     <div class="pub-list">
       <div class="pub-item">
         <span class="pub-title">
-          Title of Your Paper One
+          Novel Clustering Approach for Anomaly Detection in 5G Signals
         </span>
         <span class="pub-authors">
-          Aditya Pawar, Coauthor A, Coauthor B
+          Aditya Pawar, Shubhangi Deshmukh
         </span>
         <span class="pub-venue">
-          Conference / Journal, Year · <a href="#">paper</a> · <a href="#">code</a> · <a href="#">preprint</a>
+          IEEE INCET 2025 · <a href="https://doi.org/10.1109/INCET64471.2025.11139877">paper</a>
         </span>
       </div>
 
       <div class="pub-item">
         <span class="pub-title">
-          Title of Your Paper Two
+          Enhancing Predictive Digital Twin Modeling with Machine Learning
         </span>
         <span class="pub-authors">
-          Aditya Pawar, Coauthor A, Coauthor B
+          Aditya Pawar, Shubhangi Deshmukh
         </span>
         <span class="pub-venue">
-          Conference / Journal, Year · <a href="#">paper</a> · <a href="#">code</a>
+          IEEE MECOM 2025 · <a href="#">To appear in IEEE Xplore</a>
         </span>
       </div>
 
